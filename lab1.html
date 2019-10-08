@@ -1,0 +1,113 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css">
+
+</head>
+<body class="backround" background="https://www.wallpapermaiden.com/image/2016/11/12/fantasy-landscape-moon-reflection-river-artwork-stars-painting-fantasy-9255.jpg">
+
+<div id="menu" >
+    <ul>
+        <li><a  href="index.html" >HOME</a></li>
+        <li><a  href="index.html" >LAB</a></li>
+        <li><a href="about.html">ABOUT</a></li>
+    </ul>
+</div>
+
+<div class="tab">
+    <button class="tablinks active">Requiment</button>
+    <button class="tablinks">Design</button>
+    <button class="tablinks">Implement</button>
+<!--    <button class="tablinks">Implement</button>-->
+</div>
+<div id="Requiment" class="tabcontent">
+    <h1>Requiment</h1>
+    <ol>
+        <li><p><span>Yêu cầu:</span> Chọn 1 đối tượng bất kỳ trong thế giới thực, ví dụ
+            như sinh viên, môn học, giảng viên,... để thiết kế trên phần
+            mềm một chức năng trên web để thêm, sửa, xóa, tìm kiếm
+            cho đối tượng đó.</p></li>
+        <li>
+            Upload tất cả lên Azure / github trong menu Lab1 theo thứ tự:
+            <ul>
+                <li><span>Tab Yêu cầu: </span>copy lại nội dung của phần 1 vào đây (trình bày
+                    cho đẹp)</li>
+                <li>
+                   <span> Tab Thiết kế:</span> để link tới các file sau đây:
+                    <ul>
+
+                        <li>Thiết kế trên giấy (chụp lại ảnh)</li>
+                        <li>Thiết kế trên phần mềm thiết kế</li>
+                    </ul>
+                </li>
+                <li><span>Tab Hiện thực:</span> chuyển tất cả thiết kế ở trên ở trên sang html</li>
+
+            </ul>
+        </li>
+    </ol>
+</div>
+<div id="Design" class="tabcontent">
+    <h1>Design</h1>
+    <p class="temp"> Thiết kế trên giấy</p>
+    <div class="image-container">
+        <div class="image-container"><span>Them sinh vien</span><img src="add.jpg" style="width: 400px"></div>
+        <p class="down"><a download="add.jpg" href="add.jpg">download</a></p>
+        <div class="image-container"><span>Sua thong tin</span><img src="edit.jpg" style="width: 400px"></div>
+        <p class="down"><a download="edit.jpg" href="edit.jpg">download</a></p>
+        <div class="image-container"><span>Xoa theo mssv</span><img src="delete.jpg" style="width: 400px"></div>
+        <p class="down"><a download="delete.jpg" href="delete.jpg">download</a></p>
+        <div class="image-container"><span>Tim kiem</span><img src="search.jpg" style="width: 400px"></div>
+        <p class="down"><a download="search.jpg" href="search.jpg">download</a></p>
+    </div>
+    <p class="temp">Thiết kế trên Figma</p>
+</div>
+
+<div id="Implement" class="tabcontent">
+    <h1>Imlpement</h1>
+    <div class="bound gh">
+        <iframe width="800px" height="400px" src="addStudent.html"></iframe>
+        <a download="addStudent.html" href="addStudent.html" >ADD<i class="fas fa-download"></i> </a>
+        <iframe width="800px" height="400px" src="suaTT.html"></iframe>
+        <a download="suaTT.html" href="suaTT.html" >EDIT  <i class="fas fa-download"></i> </a>
+        <iframe width="800px" height="400px" src="Xoa.html"></iframe>
+        <a download="Xoa.html" href="Xoa.html" >DELETE  <i class="fas fa-download"></i></a>
+        <iframe width="800px" height="400px" src="Timkiem.html"></iframe>
+        <a download="Timkiem.html" href="Timkiem.html" >SEARCH<i class="fas fa-download"></i></a>
+    </div>
+</div>
+
+
+<!--    <div id="Implement" class="tabcontent">-->
+<!--        <h1>Implement</h1>-->
+
+<!--    </div>-->
+
+<script type="text/javascript">
+    var buttons = document.getElementsByClassName('tablinks');
+    var contents = document.getElementsByClassName('tabcontent');
+    function showContent(id){
+        for (var i = 0; i < contents.length; i++) {
+            contents[i].style.display = 'none';
+        }
+        var content = document.getElementById(id);
+        content.style.display = 'block';
+    }
+    for (var i = 0; i < buttons.length; i++) {
+        buttons[i].addEventListener("click", function(){
+            var id = this.textContent;
+            for (var i = 0; i < buttons.length; i++) {
+                buttons[i].classList.remove("active");
+            }
+            this.className += " active";
+            showContent(id);
+        });
+    }
+    showContent('Requiment');
+</script>
+</body>
+</html>
