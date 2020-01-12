@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <title>Đăng nhập</title>
+    <title>Tìm truyện</title>
     <meta charset="utf-8">
     <meta name="author" content="pixelhint.com">
     <meta name="description" content="La casa free real state fully responsive html5/css3 home page website template"/>
@@ -9,12 +9,9 @@
 
 <!--    <script type="text/javascript" src="jquery.js"></script>-->
 <!--    <script type="text/javascript" src="main.js"></script>-->
-<!--    <link rel="stylesheet" href="main.css">-->
     <link rel="stylesheet" href="css/bootstrap.css">
     <link rel="stylesheet" href="css/bootstrap-grid.css">
-<!--    <link rel="stylesheet" href="login.css">-->
     <link rel="stylesheet" href="fontawesome-free-5.11.2-web/css/all.css">
-<!--    <link rel="stylesheet" href="search.css">-->
 <style type="text/css">
     .navbar-nav .dropdown-menu {
         position: static;
@@ -560,63 +557,196 @@
         margin-top: 15px;
         text-align: center;
     }
+    h5{
+        font-size: 20px;
+        margin: 1.5em 0;
+        color: #626262;
+        font-family: "lato-regular", Helvetica, Arial, sans-serif;
+        letter-spacing: 1px;
+    }
 </style>
+
 </head>
 <body>
 
 <section class="hero">
     <header>
-        <nav class="navbar navbar-expand-md navbar-dark bg-primary" >
+        <nav class="navbar navbar-expand-md navbar-dark fixed-top bg-primary" style="opacity: 0.8">
             <a class="navbar-brand" href="#"></a>
             <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarCollapse" aria-controls="navbarCollapse" aria-expanded="false" aria-label="Toggle navigation">
                 <span class="navbar-toggler-icon"></span>
             </button>
             <div class="collapse navbar-collapse" id="navbarCollapse">
                 <ul class="navbar-nav mr-auto">
-                    <li class="nav-item active"><a href="index.html" class="nav-link">Diễn đàn</a></li>
-                    <li class=" sub nav-item "><a href="#" class="nav-link dropdown-toggle" data-toggle="dropdown">Thể loại<b class="caret"></b></a>
-                        <ul>
-                            <li><a> Văn học Việt Nam</a></li>
-                            <li><a>Văn học Nước Ngoài</a></li>
-                            <li><a>Truyện ngắn</a></li>
-                        </ul></li>
-                    <li class="nav-item"><a href="#" class="nav-link">Tác giả</a></li>
-                    <li class="nav-item"><a href="Search.html" class="nav-link">Tìm truyện</a></li>
-                    <li class="sub nav-item"><a href="#" class="nav-link dropdown-toggle" data-toggle="dropdown">Hướng dẫn</a>
-                        <ul>
-                            <li><a> Quy định</a></li>
-                            <li><a>Giới thiệu</a></li>
-                        </ul></li>
+                    <li class="nav-item"><a href="index.html" class="nav-link">Diễn đàn</a></li>
+                                                <li class=" sub nav-item "><a href="#" class="nav-link dropdown-toggle" data-toggle="dropdown">Thể loại<b class="caret"></b></a>
+                                                    <ul>
+                                                        <li><a> Văn học Việt Nam</a></li>
+                                                        <li><a>Văn học Nước Ngoài</a></li>
+                                                        <li><a>Truyện ngắn</a></li>
+                                                    </ul></li>
+                                                <li class="nav-item"><a href="#" class="nav-link">Tác giả</a></li>
+                                                <li class="nav-item active"><a href="Search.html" class="nav-link">Tìm truyện</a></li>
+                                                <li class="sub nav-item"><a href="#" class="nav-link dropdown-toggle" data-toggle="dropdown">Hướng dẫn</a>
+                                                    <ul>
+                                                        <li><a> Quy định</a></li>
+                                                        <li><a>Giới thiệu</a></li>
+                                                    </ul></li>
                 </ul>
                 <form class="form-inline mt-2 mt-md-0">
                     <a href="login.html" class="login_btn">Login</a>
-                    <a href="register.html" class="login_btn">Sign up</a>
+                                            <a href="register.html" class="login_btn">Sign up</a>
                 </form>
             </div>
         </nav>
     </header>
-    <div class="col-xl-10 bg-secondary" style="margin: auto; font-size: 18px; margin-top: 15px; color: white">Trang chủ / Đăng nhập</div>
-    <form class="form-signin">
-
-        <div class="form-label-group"> Email
-            <input type="email" id="inputEmail" class="form-control" placeholder="Email address" required autofocus>
-            <!--            <label for="inputEmail">Email address</label>-->
-        </div>
-
-        <div class="form-label-group"> Mật khẩu
-            <input type="password" id="inputPassword" class="form-control" placeholder="Password" required>
-            <!--            <label for="inputPassword">Password</label>-->
-        </div>
-        <button class="btn btn-lg btn-primary btn-block" type="submit">ĐĂNG NHẬP</button>
-        <p class="mt-5 mb-3 text-muted text-center"><a href="quen-mat-khau.html"> Quên mật khẩu</a></p>
-        <p class="mt-3 mb-3 text-muted text-center">Bạn chưa có tài khoản, vui lòng đăng ký <a href="dangky.html">tại đây.</a>
-        <p class="mt-3 mb-3 text-muted text-center">hoặc đăng nhập bằng </p>
-        <button class="btn btn-lg btn-primary btn-block"><i class="fab fa-facebook-f"></i>      Facebook</button>
-        <button class="btn btn-lg btn-danger btn-block"><i class="fab fa-google-plus-g"></i>       Google</button>
-    </form>
-
 </section>
-<hr class="featurette-divider">
+<div class="sort-box col-lg-11" style="margin: auto; height: 40px;position: initial">
+    <div class="sort-lbl">Tìm kiếm <i class="fa fa-angle-right" aria-hidden="true"></i></div>
+    <div class="input-group " style="position: initial">
+<!--        <input type="text" placeholder="Tìm kiếm"><i class="fas fa-search" style="font-size: 30px"></i>-->
+        <form class="form-inline mt-2 mt-md-0">
+            <input class="form-control mr-sm-2" type="text" placeholder="Search" aria-label="Search">
+            <button class="btn btn-success my-1 my-sm-0" type="submit" style="width: 50px;height: 40px"><span style="color: white"><i class="fas fa-search"></i></span></button>
+        </form>
+    </div>
+
+</div>
+<hr class="featurette-divider" style="position: initial">
+<div class="book-attr-box" style="position: initial">
+    <div class="table-responsive col-lg-11" style="margin: auto; position: initial">
+    <table class="table table-sm table-striped" style="position: initial">
+        <tbody>
+        <tr>
+            <th>Tình trang: </th>
+            <td>
+                <input type="checkbox" class="filled-in checkbox-green"><label>Hoàn thành</label>
+            </td>
+            <td> <input type="checkbox" class="filled-in checkbox-green"><label>Còn tiếp</label></td>
+            <td> <input type="checkbox" class="filled-in checkbox-green"><label>Tạm ngưng</label></td>
+            <td> <input type="checkbox" class="filled-in checkbox-green"><label>Chưa xác định</label></td>
+            <td></td>
+        </tr>
+        <tr>
+            <th>Tính chất: </th>
+            <td> <input type="checkbox"><label>Nguyên sang</label></td>
+            <td> <input type="checkbox"><label>Diễn sinh</label></td>
+            <td> </td>
+            <td></td>
+            <td></td>
+        </tr>
+        <tr>
+            <th>Giới tính:</th>
+            <td> <input type="checkbox"><label>Ngôn tình</label><br>
+                <input type="checkbox"><label>Không CP</label></td>
+            <td> <input type="checkbox"><label>Nam sinh</label></td>
+            <td> <input type="checkbox"><label>Đam mỹ</label></td>
+            <td> <input type="checkbox"><label>Bách hợp</label><td>
+            <input type="checkbox"><label>Nữ tôn</label></td>
+        </tr>
+        <tr>
+            <th>Thời đại: </th>
+            <td>
+                <input type="checkbox"><label>Cổ đại</label></td>
+            <td> <input type="checkbox"><label>Cận đại</label></td>
+            <td> <input type="checkbox"><label>Hiện đại</label></td>
+            <td> <input type="checkbox"><label>Tương lai</label></td>
+            <td></td>
+        </tr>
+        <tr>
+            <th>Kết thúc: </th>
+            <td>
+                <input type="checkbox"><label>HE</label></td>
+            <td> <input type="checkbox"><label>SE</label></td>
+            <td> <input type="checkbox"><label>OE</label></td>
+            <td></td>
+            <td></td>
+        </tr>
+        <tr>
+            <th>Loại hình: </th>
+            <td>
+                <input type="checkbox"><label>Tình cảm</label><br>
+                <input type="checkbox"><label>Trinh thám</label>
+            </td>
+            <td> <input type="checkbox"><label>Võ hiệp</label><br>
+                <input type="checkbox"><label>Manga anime</label>
+            </td>
+            <td> <input type="checkbox"><label>Tiên hiệp</label><br>
+                <input type="checkbox"><label>Khoa học viễn tưởng</label></td>
+            <td> <input type="checkbox"><label>Võng du</label><br>
+                <input type="checkbox"><label>Huyền huyễn</label></td>
+            <td><input type="checkbox"><label>Kinh dị</label><br>
+                <input type="checkbox"><label>Tây huyễn</label></td>
+        </tr>
+        </tbody>
+    </table>
+    <table class="table table-sm table-striped">
+        <tbody class="col-xl-12">
+        <tr>
+            <th>Tag: </th>
+            <td>
+<form class="input-group">
+    <input type="text" class="btn-group" placeholder="Nhận gợi ý để tìm tag" style="width: 300px; height: 40px; margin-bottom: 50px; margin-top: 10px">
+           <button class="btn-group btn-primary" type="submit" style="margin-top: 10px; height: 40px;
+border-radius: 8px; margin-left: 20px">Hiện tất cả</button></form></td>
+            <td></td>
+            <td></td>
+            <td></td>
+        </tr>
+        <tr>
+            <th>Độ dài </th>
+            <td>
+<strong>Trên: </strong><input type="text" style="border-left: none; border-right: none; border-top: none">Chương<br>
+            </td>
+            <td></td>
+            <td><strong>Dưới: </strong><input type="text" style="border-left: none; border-right: none; border-top: none">Chương  </td>
+            <td></td>
+        </tr>
+        <tr>
+            <th></th>
+            <td><input type="radio" name="radio-1" id="radio-1" > Mọi thời đại
+                <input type="radio" name="radio-1" id="radio-2" style="margin-left: 300px"> Tìm trong tháng
+                <select >
+                    <option>1</option>
+                    <option>2</option>
+                    <option>3</option>
+                    <option>4</option>
+                    <option>5</option>
+                    <option>6</option>
+                    <option>7</option>
+                    <option>8</option>
+                    <option>9</option>
+                    <option>10</option>
+                    <option>11</option>
+                    <option>12</option>
+                </select>năm
+                <select>
+                    <option>2016</option>
+                    <option>2017</option>
+                    <option>2018</option>
+                    <option>2019</option>
+                </select>
+            </td>
+            <td></td>
+            <td></td>
+            <td></td>
+        </tr>
+        <tr>
+            <td></td>
+            <td></td>
+            <td>
+                <button class="btn-group btn-primary">Tìm truyện</button>
+            </td>
+            <td></td>
+            <td></td>
+        </tr>
+        </tbody>
+
+    </table>
+
+</div>
+</div>
+    <hr class="featurette-divider">
 <footer class="ftco-footer ftco-bg-dark ftco-section">
     <div class="container">
         <div class="row mb-5">
@@ -669,15 +799,12 @@
             <div class="col-md-12 text-center">
 
                 <p><!-- Link back to Colorlib can't be removed. Template is licensed under CC BY 3.0. -->
-                    Copyright &copy;<script>document.write(new Date().getFullYear());</script> All rights reserved<i class="icon-heart" aria-hidden="true"></i> by <a href="https://colorlib.com" target="_blank">Colorlib</a>
+                    Copyright &copy;<script>document.write(new Date().getFullYear());</script> All rights reserved <i class="icon-heart" aria-hidden="true"></i> by <a href="https://colorlib.com" target="_blank">Colorlib</a>
                     <!-- Link back to Colorlib can't be removed. Template is licensed under CC BY 3.0. --></p>
             </div>
         </div>
     </div>
 </footer>
 
-<!--<script src="js/bootstrap.js"></script>-->
-<!--<script src="js/bootstrap.bundle.js"></script>-->
-<!--<script>$('.dropdown-toggle').dropdown()</script>-->
 </body>
 </html>
